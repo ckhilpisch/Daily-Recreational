@@ -1,16 +1,17 @@
-// Global Variables
+// Declare global Variables
 var stateInput;
 var activityInput;
 var darkMode = false;
-//APIs, API keys,CORS proxy 
-var npsAPIkey = "3eMx7JuhaDduCgDGcbpUQDSwo9EBymREAUXmdQch";
+//APIs, API keys,CORS proxy
+var npsAPIkey = '3eMx7JuhaDduCgDGcbpUQDSwo9EBymREAUXmdQch';
 var npsQueryURL =
     "https://developer.nps.gov/api/v1/parks?q=&api_key=" + npsAPIkey;
-var weatherapiKey = "73d3cee72322c512646546f162d5afe5";
+var weatherapiKey = '73d3cee72322c512646546f162d5afe5';
 var weatherqueryURL =
     "https://api.openweathermap.org/data/2.5/weather?units=imperial&appid=" +
     weatherapiKey;
 var corsVar = "https://chriscastle.com/proxy/index.php?:proxy:";
+
 //On click for the sumbit button
 $("#submit").on("click", function (e) {
     e.preventDefault();
@@ -18,15 +19,13 @@ $("#submit").on("click", function (e) {
     stateInput = $("#selectedState").val();
     activityInput = $("#selectedActivity").val();
 
-    console.log("State input: " + stateInput);
-    console.log("Activity input: " + activityInput);
-
     $("#activities").empty();
     $("#quote").empty();
 
     getQuote();
     getParkInfo(stateInput, activityInput);
 });
+
 //Reset button onclick function
 $("#reset").on("click", function (e) {
     e.preventDefault();
@@ -35,19 +34,21 @@ $("#reset").on("click", function (e) {
     $("#selectedState").val("State");
     $("#selectedActivity").val("Select Activity");
 });
+
 //Dark and light mode event
 $('#modeSwitch').on('click', function () {
     if (darkMode === false) {
         $('#theme').attr('href', 'assets/nightStyle.css');
-        $(this).attr({src: "./assets/baseline_lightbulb_white_18dp.png", alt: "light mode", value: "light"});
+        $(this).attr({ src: "./assets/baseline_lightbulb_white_18dp.png", alt: "light mode", value: "light" });
         darkMode = true;
         return;
     }
     $('#theme').attr('href', 'assets/style.css');
-    $(this).attr({src: "./assets/baseline_lightbulb_black_18dp.png", alt: "dark mode", value: "dark"});
+    $(this).attr({ src: "./assets/baseline_lightbulb_black_18dp.png", alt: "dark mode", value: "dark" });
     darkMode = false;
     return;
 });
+
 //Function to get National Park information and push to the page
 function getParkInfo(stateInput, activityInput) {
     npsQueryURL =
@@ -57,13 +58,13 @@ function getParkInfo(stateInput, activityInput) {
         activityInput +
         "&api_key=" +
         npsAPIkey;
-    
+
     $.ajax({
         url: npsQueryURL,
         method: "GET",
         success: function (response) {
             var result = response.data;
-            var noResults = $('<p>').attr('id','noResults');
+            var noResults = $('<p>').attr('id', 'noResults');
             noResults.html("RESULTS NOT FOUND");
             if (result.length === 0) {
                 $("#activities").append(noResults);
@@ -74,7 +75,8 @@ function getParkInfo(stateInput, activityInput) {
                     var parkImg = $("<p>").attr("class", "cardImg");
                     var img = $("<img>");
                     var parkDescription = $("<p>").attr("class", "cardDetails");
-                    var parkURL = $("<a>").attr("href", result[a].url);
+                    var urlButton = $("<button>").attr({type: "button", class: "btn btn-info" });
+                    // var parkURL = $("<a>").attr("href", result[a].url);
                     var parkLat = result[a].latitude;
                     var parkLon = result[a].longitude;
                     var parkDirections = $("<span>").attr("class", "cardDetails");
@@ -86,7 +88,9 @@ function getParkInfo(stateInput, activityInput) {
                     parkName.html("<br>" + result[a].fullName);
                     img.attr({ src: result[a].images[0].url, class: "parkImg" });
                     parkDescription.html(result[a].description);
-                    parkURL.html(result[a].url);
+                    urlButton.html("Visit Website");
+                    urlButton.attr({onclick: 'location.href=' + "'" + result[a].url + "'"});
+                    // parkURL.html(result[a].url);
                     parkDirections.html(result[a].directionsInfo);
                     parkWeatherInfo.html(result[a].weatherInfo);
                     parkContactHeader.html("<br>" + "Contact Park");
@@ -97,16 +101,17 @@ function getParkInfo(stateInput, activityInput) {
                     parkDiv.append(img, parkName, parkDescription);
 
                     $("#activities").append(parkDiv);
-
-                    getParkWeather(parkLat, parkLon, a, parkContactHeader, parkPhone, parkEmail, parkURL);
+                    // call open weather api to get weather for the current park response
+                    getParkWeather(parkLat, parkLon, a, parkContactHeader, parkPhone, parkEmail, urlButton);
 
                 }
             }
         },
     });
 }
+
 //Function to get park weather information and push to the page
-function getParkWeather(parkLat, parkLon, a, parkContactHeader, parkPhone, parkEmail, parkURL) {
+function getParkWeather(parkLat, parkLon, a, parkContactHeader, parkPhone, parkEmail, urlButton) {
     var weatherqueryURL =
         "https://api.openweathermap.org/data/2.5/weather?lat=" +
         parkLat +
@@ -137,7 +142,7 @@ function getParkWeather(parkLat, parkLon, a, parkContactHeader, parkPhone, parkE
                 "https://openweathermap.org/img/wn/" + weather.weather[0].icon + ".png"
             );
 
-            $("#card-" + a).append(weatherHeader, descrip, temp, humidity, parkContactHeader, parkPhone, parkEmail, parkURL);
+            $("#card-" + a).append(weatherHeader, descrip, temp, humidity, parkContactHeader, parkPhone, parkEmail, urlButton);
 
         },
     });

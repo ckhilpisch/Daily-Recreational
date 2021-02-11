@@ -69,4 +69,4 @@ Chris Boisjoli: https://github.com/ChrisBoisjoli<br/>
 For open source projects, say how it is licensed.
 
 # The Website:
-https://kdkleven.github.io/dailyRecreational/
+https://ckhilpisch.github.io/Daily-Recreational/

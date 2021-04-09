@@ -1,56 +1,98 @@
-# uofm-bootcamp-project1
-Project 1: Daily Recreational
-
-Requirements: 
-![Project Requirements](assets/Required.png)
+## 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 
-## Author's Notes
-* We started the initial project by voting on an app to create, assigning a project manager (Kyle), and dividing the tasks between the front end(Chris and Asli) and the back end (Kyle and Carolyn).  We followed up with a Trello board.   
-* Everyone had access to the board and could create, move, and modify the cards.
-* We used the board to create the beginning tasks necessary to start the project.  
-![Trello Board](assets/Trello.png)
+# <div align="center"> Daily Recreational </div>
+A National Parks App
 
+## <div align="center"> Table of Contents: </div>
+<ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#technologies">Technologies</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#questions">Questions</a></li>
+<li><a href="#roadmap">Questions</a></li>
+<li><a href="#license">License</a></li>
+</ul>
 
-# Daily Recreational
-We chose the name of Daily Recreational for our project.   
+## <div align="center"> Description : </div>
 
-# Description
 Daily Recreational is here to inspire you to get out of the house and rekindle your love for outdoor activities. Daily Recreational provides you with an inspirational quote to brighten your day, paired with useful information on National Parks based on your desired state and activity. Whether you like birdwatching or mountain climbing, the Daily Recreational is your source for getting in a positively active mindset.
+<br>
 
+## <div align="center"> Technologies : </div>
+<ul>
+<li>Two server side APIs</li>
+<li>HTML</li>
+<li>Bootstrap</li>
+<li>CSS</li>
+<li>Two Third party APIs</li>
+<li>Javascript</li>
+<li>jQuery</li>
+</ul>
 
-# Visuals
-One of the major requirements was a responsive site.   Below are different sized versions.
-## Desktop:
+## <div align="center">Installation : </div>
+The application can be run via the website page:
+
+https://ckhilpisch.github.io/Daily-Recreational/  
+
+## <div align="center">Usage : </div> 
+The user will come to the website, be able to chose an activity and a state, and see the parks that are located near them.   This website also offfers an inspirational quote to motivate the user and help create a good mood.
+One of the major requirements of any app is a responsive site.   Below are different sized versions.
+### <div align="center"> Desktop: </div>
 ![Daily Recreational](assets/Laptop.png)
 
-## iPad:
+### <div align="center"> iPad: </div>
 ![iPad photo](assets/Ipad.png)
 
-## iPhone:
+### <div align="center"> iPhone: </div>
 ![iPhone photo](assets/iPhone.png)
 
-
-
-# Usage
-We had several things populate to the cards dynamically. We had the park name, a park photo, the park description, a link to the park, the park weather (based on the latitude and longitude of the park), and the contact info for the park.
-
-### Card info:
+### <div align="center">Card info : </div>
 ![card info](assets/Info.png)
 
 
-We also had to create a response for a search that created no results.
+We also wanted to create a response for a search that created no results.
 
-### No Result: 
+### <div align="center">No Result: </div>
 ![No Results photo](assets/No_results.png)
 
-### Dark/Light Mode
+### <div align="center">Dark/Light Mode : </div>
 We also made a toggle for light and dark by placing a button in the header.
 ![Light photo](assets/Light.png)
 <br>
 ![Dark photo](assets/Dark.png)
 
-# Roadmap
+
+## <div align="center">Testing : </div>
+N/A
+
+## <div align="center">Contributing : </div>
+
+Pull requests are always welcome.  When contributing to this repository, please first discuss the change you wish to make via email or issue.  
+After approval, please follow the "fork-and-pull" Git workflow.
+<ol>
+<li>Fork the repo on GitHub</li>
+<li>Clone the project to your own machine</li>
+<li>Commit changes to your own branch</li>
+<li>Push your work back up to your fork</li>
+<li>Submit a Pull request so that we can review your changes</li>
+</ol>
+
+## <div align="center"> Questions : </div>
+
+If you have any questions, feel free to reach out to me or my co-authors.   
+
+### <div align="center">Authors : </div>
+Kyle Kleven: https://github.com/kdkleven<br/>
+Carolyn Hilpisch: https://github.com/ckhilpisch<br/>
+Chris Boisjoli: https://github.com/ChrisBoisjoli<br/>
+
+
+## <div align="center"> Roadmap : </div>
 For the future, there are a few ideas for app expansion:
 *  An incorporation of more local events to include -  but not be limited to - state and local parks.   
 * Along with more places a zip code radius to show the closest activities and return them in ascending order of proximity. 
@@ -59,14 +101,13 @@ For the future, there are a few ideas for app expansion:
 * Eventually an expansion to an international app and an inclusion of more inspirational and entertaining quotes.
 
 
-# Authors 
-Kyle Kleven: https://github.com/kdkleven<br/>
-Carolyn Hilpisch: https://github.com/ckhilpisch<br/>
-Chris Boisjoli: https://github.com/ChrisBoisjoli<br/>
+## <div align="center">License : </div>
+
+MIT License
+Informataion avaiable here: 
+https://opensource.org/licenses/MIT
+
+
+
+
  
-
-# License
-For open source projects, say how it is licensed.
-
-# The Website:
-https://ckhilpisch.github.io/Daily-Recreational/

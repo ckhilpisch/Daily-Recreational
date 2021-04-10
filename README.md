@@ -3,27 +3,27 @@
 
 
 # <div align="center"> Daily Recreational </div>
-A National Parks App
+<h3 align="center"> A National Parks App </h3>
 
 ## <div align="center"> Table of Contents: </div>
-<ul>
-<li><a href="#description">Description</a></li>
-<li><a href="#technologies">Technologies</a></li>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#usage">Usage</a></li>
-<li><a href="#testing">Testing</a></li>
-<li><a href="#contributing">Contributing</a></li>
-<li><a href="#questions">Questions</a></li>
-<li><a href="#roadmap">Questions</a></li>
-<li><a href="#license">License</a></li>
-</ul>
 
-## <div align="center"> Description : </div>
+* [Description](#description)
+* [Technologies](#technologies)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Visuals](#visuals)
+* [Testing](#testing)
+* [Contributing](#contributing)
+* [Questions](#questions)
+* [Roadmap](#roadmap)
+* [License](#license)
+
+## <div align ='center'> <a name="description"> **Description** :</a></div> 
 
 Daily Recreational is here to inspire you to get out of the house and rekindle your love for outdoor activities. Daily Recreational provides you with an inspirational quote to brighten your day, paired with useful information on National Parks based on your desired state and activity. Whether you like birdwatching or mountain climbing, the Daily Recreational is your source for getting in a positively active mindset.
 <br>
 
-## <div align="center"> Technologies : </div>
+## <div align ='center'> <a name="technologies"> **Technologies** :</a></div> 
 <ul>
 <li>Two server side APIs</li>
 <li>HTML</li>
@@ -34,13 +34,21 @@ Daily Recreational is here to inspire you to get out of the house and rekindle y
 <li>jQuery</li>
 </ul>
 
-## <div align="center">Installation : </div>
+
+
+## <div align ='center'> <a name="installation"> **Installation** :</a></div> 
 The application can be run via the website page:
 
 https://ckhilpisch.github.io/Daily-Recreational/  
 
-## <div align="center">Usage : </div> 
-The user will come to the website, be able to chose an activity and a state, and see the parks that are located near them.   This website also offfers an inspirational quote to motivate the user and help create a good mood.
+
+
+## <div align="center"><a name="usage"> **Usage** :</a></div>
+The user will come to the website, be able to chose an activity and a state, and see the parks that are located near them.  The park information returns a link to the website, a phone number, and a photo of the park.   This app also offers an inspirational quote to motivate and uplift the user.
+
+
+
+## <div align="center"><a name="visuals"> **Visuals** :</a></div>
 One of the major requirements of any app is a responsive site.   Below are different sized versions.
 ### <div align="center"> Desktop: </div>
 ![Daily Recreational](assets/Laptop.png)
@@ -67,10 +75,16 @@ We also made a toggle for light and dark by placing a button in the header.
 ![Dark photo](assets/Dark.png)
 
 
-## <div align="center">Testing : </div>
+
+
+
+## <div align ='center'> <a name="testing"> **Testing** : </div> 
+
 N/A
 
-## <div align="center">Contributing : </div>
+
+
+## <div align="center"><a name="contributing"> **Contributing** :</a></div>
 
 Pull requests are always welcome.  When contributing to this repository, please first discuss the change you wish to make via email or issue.  
 After approval, please follow the "fork-and-pull" Git workflow.
@@ -82,9 +96,13 @@ After approval, please follow the "fork-and-pull" Git workflow.
 <li>Submit a Pull request so that we can review your changes</li>
 </ol>
 
-## <div align="center"> Questions : </div>
+
+
+## <div align="center"><a name="questions"> **Questions** :</a></div>
 
 If you have any questions, feel free to reach out to me or my co-authors.   
+
+
 
 ### <div align="center">Authors : </div>
 Kyle Kleven: https://github.com/kdkleven<br/>
@@ -92,7 +110,8 @@ Carolyn Hilpisch: https://github.com/ckhilpisch<br/>
 Chris Boisjoli: https://github.com/ChrisBoisjoli<br/>
 
 
-## <div align="center"> Roadmap : </div>
+
+## <div align="center"><a name="roadmap"> **Roadmap** :</a></div>
 For the future, there are a few ideas for app expansion:
 *  An incorporation of more local events to include -  but not be limited to - state and local parks.   
 * Along with more places a zip code radius to show the closest activities and return them in ascending order of proximity. 
@@ -101,7 +120,7 @@ For the future, there are a few ideas for app expansion:
 * Eventually an expansion to an international app and an inclusion of more inspirational and entertaining quotes.
 
 
-## <div align="center">License : </div>
+## <div align ='center'> <a name="license"> **License** : </div> 
 
 MIT License
 Informataion avaiable here: 
